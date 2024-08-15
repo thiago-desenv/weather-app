@@ -31,6 +31,11 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  onSubmit(): void {
+    this.getWeatherDatas(this.initialCityName);
+    this.initialCityName = '';
+  }
+
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
