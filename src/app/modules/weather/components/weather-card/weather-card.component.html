@@ -7,11 +7,11 @@
 
     <div class="weather-data">
       <div class="location">{{ weatherDatasInput.name }}</div>
-      <div class="temperature">{{ weatherDatasInput.main.temp | number: "1.0-0" }}℃</div>
+      <div class="temperature">{{ weatherDatasInput.main.temp | number : "1.0-0" }}℃</div>
     </div>
   </div>
 
-  <div class="lowe-data">
+  <div class="lower-data">
     <div class="more-info-label">Mais informações</div>
 
     <div class="more-info-container">
@@ -21,7 +21,16 @@
           <span>Mínima</span>
         </div>
 
-        <div class="info-block-value">{{ weatherDatasInput.main.temp_min | number: "1.0-0" }}℃</div>
+        <div class="info-block-value">{{ weatherDatasInput.main.temp_min | number : "1.0-0" }}℃</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperatureIcon"></fa-icon>
+          <span>Máxima</span>
+        </div>
+
+        <div class="info-block-value">{{ weatherDatasInput.main.temp_max | number : "1.0-0" }}℃</div>
       </div>
     </div>
   </div>
