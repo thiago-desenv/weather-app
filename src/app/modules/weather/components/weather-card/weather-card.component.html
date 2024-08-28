@@ -32,6 +32,15 @@
 
         <div class="info-block-value">{{ weatherDatasInput.main.temp_max | number : "1.0-0" }}℃</div>
       </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidityIcon"></fa-icon>
+          <span>Umidade</span>
+        </div>
+
+        <div class="info-block-value">{{ weatherDatasInput.main.humidity }}%</div>
+      </div>
     </div>
   </div>
 </div>
